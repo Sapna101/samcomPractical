@@ -1,0 +1,4 @@
+<p>Stories</p>
+<div *ngFor="let story of stories" class="storydata" [routerLink]="(['/storyPage'])" [queryParams]="{id : story._id,name: story.name}">
+  {{story.name}}
+</div>

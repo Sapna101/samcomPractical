@@ -1,0 +1,12 @@
+<div [routerLink]="['/story']">{{storyName}}</div>
+<div *ngFor="let story of storypages" class="storydata">
+  <div class="storydata" >
+    {{story.storyPagename}}
+  </div>
+  <div *ngIf="story.page.includes('.mp4')" class="storydata" >
+    <mat-video src="assets/uploads/try.mp4" [preload]="true"></mat-video>
+  </div>
+  <div *ngIf="story.page.includes('.png')" class="storydata" >
+    <img src={{story.page}} class="storyimgdata">
+  </div>
+</div>
